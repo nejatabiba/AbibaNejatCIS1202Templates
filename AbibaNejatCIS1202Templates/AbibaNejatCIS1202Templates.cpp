@@ -7,6 +7,7 @@
 
 using namespace std;
 
+int half(const int num);
 template <class T> T half(const T& num);
 
 int main()
@@ -23,4 +24,9 @@ int main()
 
 template <class T> T half(const T& num) {
     return num / 2;
+}
+
+int half(const int num) {
+    double result = static_cast<double>(num)/2;
+    return round(result);
 }
